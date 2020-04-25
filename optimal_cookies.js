@@ -1,3 +1,8 @@
+/**
+ * Used to display optimal cookies needed in bank for golden cookie clicks
+ *
+ * @author Mp6
+ */
 class Mp6OptimalCookies {
 	constructor() {
 		Mp6.utilities.RegisterUpdateCallback(this.show_optimal_golden);
