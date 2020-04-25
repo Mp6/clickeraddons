@@ -1,26 +1,15 @@
-// ==UserScript==
-// @name         Mp6's Cookie Addons
-// @source       https://github.com/Mp6/clickeraddons
-// @version      0.12
-// @updateURL    https://raw.githubusercontent.com/Mp6/clickeraddons/master/userscript.js
-// @downloadURL  https://raw.githubusercontent.com/Mp6/clickeraddons/master/userscript.js
-// @description  Minor addons for cookie clicker
-// @author       Mp6
-// @match        https://orteil.dashnet.org/cookieclicker/
-// @grant        none
-// @run-at       document-idle
-// ==/UserScript==
+import {Mp6ModLoader} from './src/Loader.js';
 
 function Mp6LoadMod() {
-	var mp6loadready = setInterval(()=>{
-		if(typeof Game.ready !== 'undefined' && Game.ready)
+	let load_interval = setInterval(()=>{
+		if(typeof Game.ready !== 'unedfined' && Game.ready)
 		{
-			Game.LoadMod('https://cdn.jsdelivr.net/gh/Mp6/clickeraddons@latest/initialize_scripts.js');
-			clearInterval(mp6loadready);
+			console.log('Loading Mp6 Cookie Addon Version 0.20');
+			Mp6.loader = new Mp6ModLoader();
+			clearInterval(load_interval);
 		}
-		else
-			Mp6LoadMod();
 	}, 1000);
 }
 
+export const Mp6 = {};
 window.addEventListener("load", Mp6LoadMod, false);

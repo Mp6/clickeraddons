@@ -3,12 +3,14 @@
  *
  * @author Mp6
  */
-class Mp6OptimalCookies {
+import {Mp6} from './../userscript.js';
+
+export class Mp6OptimalCookies {
 	constructor() {
 		this.debug = true;
 		if(this.debug)
-			console.log('Optimal Cookies Version 0.1');
-		Mp6.utilities.RegisterUpdateCallback(this.show_optimal_golden);
+			console.log('Optimal Cookies Version 0.3');
+		Mp6.utilities.RegisterUpdateCallback(this, 'show_optimal_golden');
 	}
 
 	show_optimal_golden() {
@@ -91,7 +93,7 @@ class Mp6OptimalCookies {
 			comma_count = comma_count.length;
 			if(comma_count > 19)
 				comma_count = 19;
-			string_array = amount.split(',');
+			let string_array = amount.split(',');
 			let format_amount = string_array[0] + '.' + string_array[1];
 			let format_obj = {
 				original: Math.round(parseFloat(format_amount)),

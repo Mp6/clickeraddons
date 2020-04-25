@@ -1,0 +1,25 @@
+{
+  "name": "clicker-addons",
+  "version": "1.0.0",
+  "description": "Cookie clicker addons for personal/other use",
+  "main": "initialize_scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mp6/clickeraddons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mp6/clickeraddons/issues"
+  },
+  "homepage": "https://github.com/Mp6/clickeraddons#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
