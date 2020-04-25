@@ -9,7 +9,8 @@ class Mp6ModLoader {
 
 		if(this.debug)
 			console.log('Loading External Scripts');
-		LoadExternalScripts();
+		this.LoadExternalScripts();
+		this.InitializeAddons();
 	}
 
 	LoadExternalScripts() {
@@ -37,7 +38,7 @@ class Mp6ModLoader {
 		});
 	}
 
-	StartMp6Scripts() {
+	InitializeAddons() {
 		Mp6.utilities = new Mp6Utilities();
 		Mp6.optimal = new Mp6OptimalCookies();
 	}
