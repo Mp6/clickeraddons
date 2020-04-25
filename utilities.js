@@ -7,6 +7,7 @@ class Mp6Utilities {
 	constructor() {
 		this.update_callbacks = [];
 		this.update_interval = 500;
+		this.StartUpdateLoop();
 	}
 
 	RegisterUpdateCallback(callback) {
