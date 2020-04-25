@@ -6,21 +6,23 @@
 import {Mp6} from './../userscript.js';
 import {Mp6Utilities} from './Utilities.js';
 import {Mp6OptimalCookies} from './OptimalCookies.js';
+import {Mp6Clicker} from './Clicker.js';
 
 export class Mp6ModLoader {
 	constructor() {
 		this.debug = true;
 
 		if(this.debug)
-			console.log('Loader Version 0.11');
+			console.log('Loader Version 0.14');
 
-		if(this.debug)
-			console.log('Loading External Scripts');
 		this.LoadExternalScripts();
 		this.InitializeAddons();
 	}
 
 	LoadExternalScripts() {
+		if(this.debug)
+			console.log('Loading External Scripts');
+
 		let that = this;
 
 		// Load jQuery
@@ -31,7 +33,17 @@ export class Mp6ModLoader {
 	}
 
 	InitializeAddons() {
-		Mp6.utilities = new Mp6Utilities();
-		Mp6.optimal_cookies = new Mp6OptimalCookies();
+		let that = this;
+		this.load_interval = setInterval(()=>{
+			if(typeof jQuery !== 'undefined')
+			{
+				if(that.debug)
+					console.log('jQuery is defined, loading other classes');
+				Mp6.utilities = new Mp6Utilities();
+				Mp6.optimal_cookies = new Mp6OptimalCookies();
+				Mp6.clicker = new Mp6Clicker();
+				clearInterval(that.load_interval);
+			}
+		}, 500);
 	}
 }
