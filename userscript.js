@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mp6's Cookie Addons
 // @source 		 https://raw.githubusercontent.com/Mp6/clickeraddons/master/userscript.js
-// @version      0.2
+// @version      0.3
 // @description  Minor addons for cookie clicker
 // @author       Mp6
 // @match        https://orteil.dashnet.org/cookieclicker/
@@ -12,4 +12,4 @@ function Mp6LoadMod() {
 	Game.LoadMod('https://raw.githubusercontent.com/Mp6/clickeraddons/master/initialize_scripts.js');
 }
 
-window.addEventListener("load", Mp6LoadMod, false);
+window.addEventListener("ready", Mp6LoadMod, false);
