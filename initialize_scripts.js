@@ -8,7 +8,7 @@ class Mp6ModLoader {
 		this.debug = true;
 
 		if(this.debug)
-			console.log('Loader Version 0.1');
+			console.log('Loader Version 0.2');
 
 		// Set up class list
 		this.classes = [
@@ -48,10 +48,11 @@ class Mp6ModLoader {
 	}
 
 	InitializeAddons() {
+		let that = this;
 		let init_interval = setInterval(()=>{
 			
 			let all_found = true;
-			classes.forEach((classname) => {
+			that.classes.forEach((classname) => {
 				if(window[classname] === 'undefined')
 					all_found = false;
 			});
