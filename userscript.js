@@ -15,7 +15,7 @@ function Mp6LoadMod() {
 	var mp6loadready = setInterval(()=>{
 		if(typeof Game.ready !== 'undefined' && Game.ready)
 		{
-			Game.LoadMod('https://cdn.jsdelivr.net/gh/Mp6/clickeraddons/initialize_scripts.js');
+			Game.LoadMod('https://cdn.jsdelivr.net/gh/Mp6/clickeraddons@master/initialize_scripts.js');
 			clearInterval(mp6loadready);
 		}
 		else

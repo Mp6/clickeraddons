@@ -23,8 +23,8 @@ class Mp6ModLoader {
 		document.head.appendChild(jQuery);
 
 		var scripts = [
-			'https://cdn.jsdelivr.net/gh/Mp6/clickeraddons/utilities.js',
-			'https://cdn.jsdelivr.net/gh/Mp6/clickeraddons/optimal_cookies.js',
+			'https://cdn.jsdelivr.net/gh/Mp6/clickeraddons@master/utilities.js',
+			'https://cdn.jsdelivr.net/gh/Mp6/clickeraddons@master/optimal_cookies.js',
 		];
 
 		scripts.forEach((script) => {
