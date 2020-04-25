@@ -1,4 +1,3 @@
-
 class Mp6ModLoader {
 	constructor() {
 		LoadExternalScripts();
