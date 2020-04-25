@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mp6's Cookie Addons
 // @source       https://github.com/Mp6/clickeraddons
-// @version      0.10
+// @version      0.11
 // @updateURL    https://raw.githubusercontent.com/Mp6/clickeraddons/master/userscript.js
 // @downloadURL  https://raw.githubusercontent.com/Mp6/clickeraddons/master/userscript.js
 // @description  Minor addons for cookie clicker
