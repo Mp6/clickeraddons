@@ -5,6 +5,9 @@
  */
 class Mp6OptimalCookies {
 	constructor() {
+		this.debug = true;
+		if(this.debug)
+			console.log('Optimal Cookies Version 0.1');
 		Mp6.utilities.RegisterUpdateCallback(this.show_optimal_golden);
 	}
 

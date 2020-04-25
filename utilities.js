@@ -5,6 +5,9 @@
  */
 class Mp6Utilities {
 	constructor() {
+		this.debug = true;
+		if(this.debug)
+			console.log('Utlities Version 0.1');
 		this.update_callbacks = [];
 		this.update_interval = 500;
 		this.StartUpdateLoop();
